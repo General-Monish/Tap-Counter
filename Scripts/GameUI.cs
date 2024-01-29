@@ -52,7 +52,9 @@ public class GameUI : MonoBehaviour
     }
     public void MainMenuBtnCLicked()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
+       
     }
     public void RestartBtnCLicked()
     {

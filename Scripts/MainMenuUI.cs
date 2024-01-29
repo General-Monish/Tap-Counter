@@ -10,6 +10,7 @@ public class MainMenuUI : MonoBehaviour
     [SerializeField] private GameObject howToPlay;
     [SerializeField] private GameObject credits;
     [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject fadePanel;
     [SerializeField] private AudioClip audioClip;
     [SerializeField] private AudioSource aD;
     [SerializeField] private Animator anim;
@@ -17,6 +18,7 @@ public class MainMenuUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Fadein();
         mainMenu.SetActive(true);
         settings.SetActive(false);
         howToPlay.SetActive(false);
@@ -63,7 +65,15 @@ public class MainMenuUI : MonoBehaviour
 
     public void PlayBtnClicked()
     {
+        Fadeout();
         SoundUI();
+        StartCoroutine(DelayLevel());
+      
+    }
+
+    IEnumerator DelayLevel()
+    {
+        yield return new WaitForSeconds(.5f);
         SceneManager.LoadScene("Game");
     }
 
@@ -77,5 +87,14 @@ public class MainMenuUI : MonoBehaviour
         yield return new WaitForSeconds(1);
         settings.SetActive(false);
         settingsBtn.SetActive(true);
+    }
+
+    void Fadein()
+    {
+        fadePanel.GetComponent<Animator>().SetTrigger("fin");
+    }
+    void Fadeout()
+    {
+        fadePanel.GetComponent<Animator>().SetTrigger("fout");
     }
 }

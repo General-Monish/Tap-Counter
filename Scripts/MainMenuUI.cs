@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuUI : MonoBehaviour
 {
     [SerializeField] private GameObject settings;
+    [SerializeField] private GameObject settingsBtn;
     [SerializeField] private GameObject howToPlay;
     [SerializeField] private GameObject credits;
     [SerializeField] private GameObject mainMenu;
@@ -33,6 +34,7 @@ public class MainMenuUI : MonoBehaviour
         SoundUI();
         mainMenu.SetActive(false);
         settings.SetActive(true);
+        settingsBtn.SetActive(false);
         anim.SetTrigger("in");
     }
     public void HotToPlayBtnClicked()
@@ -52,9 +54,9 @@ public class MainMenuUI : MonoBehaviour
     {
         SoundUI();
         anim.SetTrigger("out");
+        StartCoroutine(DisableSettingsPanel());
+        // settings.SetActive(false);
         mainMenu.SetActive(true);
-       // settings.SetActive(false);
-       
         howToPlay.SetActive(false);
         credits.SetActive(false);
     }
@@ -68,5 +70,12 @@ public class MainMenuUI : MonoBehaviour
     private void SoundUI()
     {
         aD.PlayOneShot(audioClip);
+    }
+
+    public IEnumerator DisableSettingsPanel()
+    {
+        yield return new WaitForSeconds(1);
+        settings.SetActive(false);
+        settingsBtn.SetActive(true);
     }
 }

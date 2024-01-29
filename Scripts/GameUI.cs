@@ -89,22 +89,18 @@ public class GameUI : MonoBehaviour
         Debug.Log("Reset Clicked");
     }
 
-    public void PauseResumeBtnClicked()
+    public void PauseBtnClicked()
     {
-        if (Time.timeScale == 0)
-        {
-            // Currently paused, so resume
-            Time.timeScale = 1;
-            isPaused = false;
-            gamePausePanel.SetActive(false);
-        }
-        else
-        {
-            // Currently not paused, so pause
-            Time.timeScale = 0;
-            isPaused = true;
-            gamePausePanel.SetActive(true);
-        }
+        gamePausePanel.SetActive(true);
+        isPaused = true;
+        Time.timeScale = 0;
+    }
+
+    public void ResumeBtnClicked()
+    {
+        isPaused = false;
+        gamePausePanel.SetActive(false);
+        Time.timeScale = 1;
     }
 
 

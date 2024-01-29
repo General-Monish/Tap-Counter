@@ -848,7 +848,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1292023843}
         m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
-        m_MethodName: PauseResumeBtnClicked
+        m_MethodName: ResumeBtnClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3639,7 +3639,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1292023843}
         m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
-        m_MethodName: PauseResumeBtnClicked
+        m_MethodName: PauseBtnClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

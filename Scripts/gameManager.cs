@@ -18,10 +18,11 @@ public class gameManager : MonoBehaviour
     [SerializeField] private AudioClip[] audioClipsArray;
     private int LevelNum=1;
     private int LevelMultiplier=10;
+    [SerializeField] private ParticleSystem ParticleEffect=null;
     // Start is called before the first frame update
     void Start()
     {
-       
+
         countDown = 3;
         CountDownTimerEnded = false;
         LoadHighScore();
@@ -75,6 +76,7 @@ public class gameManager : MonoBehaviour
 
             if (!gameUI.isPaused &&  Input.GetMouseButtonDown(0))
             {
+                ParticleEffect.Play();
                 TapSound();
                 tapCount++;
                 gameUI.UpdatingTapCount();

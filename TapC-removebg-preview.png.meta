@@ -136,10 +136,11 @@ TextureImporter:
     serializedVersion: 2
     sprites: []
     outline:
-    - - {x: -175, y: -98}
+    - - {x: -28, y: -171}
+      - {x: -171, y: -163}
       - {x: -175, y: 211}
       - {x: 167, y: 211}
-      - {x: 167, y: -98}
+      - {x: 177, y: -168}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000

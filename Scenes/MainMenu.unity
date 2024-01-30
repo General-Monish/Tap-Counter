@@ -5726,7 +5726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &470549120
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6640,7 +6640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1162180072
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6874,7 +6874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.014, y: 0.915}
   m_AnchorMax: {x: 0.19800001, y: 0.9850001}
-  m_AnchoredPosition: {x: 0.5999756, y: -0.79992676}
+  m_AnchoredPosition: {x: 0.5999756, y: -0.8000488}
   m_SizeDelta: {x: -1.4282837, y: -1.4812012}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1248977681
@@ -8165,13 +8165,13 @@ MonoBehaviour:
 
     Game Developer
 
-    
 
-    Hello, fellow gamers!
-    I''m Monis, the creative mind behind TapCounter. Crafting this gaming experience
-    has been an incredible journey, and I''m thrilled to share it with you.
 
-    
+    Hello, fellow gamers! I''m Monis,
+    the creative mind behind TapCounter. Crafting this gaming experience has been
+    an incredible journey, and I''m thrilled to share it with you.
+
+
 
     Connect
     with Me:
@@ -8449,7 +8449,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.014, y: 0.92200005}
   m_AnchorMax: {x: 0.19900002, y: 0.99122924}
-  m_AnchoredPosition: {x: 1.0999756, y: -1.2000732}
+  m_AnchoredPosition: {x: 1.0999756, y: -1.1999512}
   m_SizeDelta: {x: -1.4282837, y: -0.48120117}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2137299910

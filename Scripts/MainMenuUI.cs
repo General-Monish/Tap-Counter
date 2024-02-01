@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
 {
-    [SerializeField] private GameObject settings;
-    [SerializeField] private GameObject settingsBtn;
+  /*  [SerializeField] private GameObject settings;*/
+/*    [SerializeField] private GameObject settingsBtn;*/
     [SerializeField] private GameObject howToPlay;
     [SerializeField] private GameObject credits;
     [SerializeField] private GameObject mainMenu;
-    [SerializeField] private GameObject fadePanel;
+/*    [SerializeField] private GameObject fadePanel;*/
     [SerializeField] private AudioClip audioClip;
     [SerializeField] private AudioSource aD;
     [SerializeField] private Animator anim;
@@ -18,9 +18,9 @@ public class MainMenuUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Fadein();
+       /* Fadein();*/
         mainMenu.SetActive(true);
-        settings.SetActive(false);
+      /*  settings.SetActive(false);*/
         howToPlay.SetActive(false);
         credits.SetActive(false);
     }
@@ -31,14 +31,14 @@ public class MainMenuUI : MonoBehaviour
         
     }
 
-    public void SettingBtnClicked()
+  /*  public void SettingBtnClicked()
     {
         SoundUI();
         mainMenu.SetActive(false);
         settings.SetActive(true);
         settingsBtn.SetActive(false);
         anim.SetTrigger("in");
-    }
+    }*/
     public void HotToPlayBtnClicked()
     {
         SoundUI();
@@ -55,8 +55,8 @@ public class MainMenuUI : MonoBehaviour
     public void BackBtnClicked()
     {
         SoundUI();
-        anim.SetTrigger("out");
-        StartCoroutine(DisableSettingsPanel());
+    
+  /*      StartCoroutine(DisableSettingsPanel());*/
         // settings.SetActive(false);
         mainMenu.SetActive(true);
         howToPlay.SetActive(false);
@@ -65,7 +65,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void PlayBtnClicked()
     {
-        Fadeout();
+      /*  Fadeout();*/
         SoundUI();
         StartCoroutine(DelayLevel());
       
@@ -82,7 +82,7 @@ public class MainMenuUI : MonoBehaviour
         aD.PlayOneShot(audioClip);
     }
 
-    public IEnumerator DisableSettingsPanel()
+ /*   public IEnumerator DisableSettingsPanel()
     {
         yield return new WaitForSeconds(1);
         settings.SetActive(false);
@@ -96,5 +96,5 @@ public class MainMenuUI : MonoBehaviour
     void Fadeout()
     {
         fadePanel.GetComponent<Animator>().SetTrigger("fout");
-    }
+    }*/
 }
